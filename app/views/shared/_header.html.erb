@@ -1,0 +1,27 @@
+<header class="header">
+      <div class= "container">
+       <%= link_to image_tag("1576722134-1.png", class:"mono-icon"), "/" %>
+       <%= link_to "mono", "#", class: :title_name%>
+        <div class="nav">
+          <%# ログインしているときは以下を表示するようにしましょう %>
+           <%if user_signed_in? %>
+            <div class="nav__right">
+              <%= link_to "カテゴリー", "#", class: :navcategory_btn%>
+              <%= link_to current_user.nickname, "#", class: :current_user_name%>
+              <%= link_to "ログアウト",  destroy_user_session_path, class: :nav__logout,  method: :delete %>
+              <%= link_to "新規出品",new_item_path, class: :nav__btn %>
+            </div >
+          <%# // ログインしているときは上記を表示するようにしましょう %>
+          <%# ログインしていないときは以下を表示するようにしましょう %>
+            <%else%>
+            <div class="nav__right">
+              <%= link_to "ログイン", new_user_session_path, class: :nav__btn %>
+              <%= link_to "新規登録",  new_user_registration_path, class: :nav__btn %>
+            </div>
+            <%end%>
+          <%# // ログインしていないときは上記を表示するようにしましょう %>
+      </div>
+    </header>
+
+
+  
