@@ -1,8 +1,8 @@
 class AddressesController < ApplicationController
   before_action :authenticate_user!, only: [:index, :create]
   before_action :get_item_params, only: [:index, :create]
-  
-  
+  before_action :move_to_root_path, only: [:index, :create]
+
   def index
     @user_item_address = UserItemAddress.new
   end
@@ -18,25 +18,27 @@ class AddressesController < ApplicationController
     end
   end
 
-private
+  private
 
-def get_item_params
-  @item = Item.find(params[:item_id])
+  def get_item_params
+    @item = Item.find(params[:item_id])
+  end
+
+  def move_to_root_path
+    redirect_to root_path if @item.user_id == current_user.id || @item.user_item.present?
+  end
+
+  def user_item_address_params
+    params.require(:user_item_address).permit(:post_number, :place_id, :city, :phone_number,
+                                              :building_name, :address).merge(user_id: current_user.id, token: params[:token], item_id: params[:item_id])
+  end
+
+  def pay_item
+    Payjp.api_key = ENV['PAYJP_SECRET_KEY']
+    Payjp::Charge.create(
+      amount: @item.value,
+      card: user_item_address_params[:token],
+      currency: 'jpy'
+    )
+  end
 end
-
-def user_item_address_params
-  params.require(:user_item_address).permit(:post_number, :place_id, :city, :phone_number,
-                                            :building_name, :address).merge(user_id: current_user.id, token: params[:token], item_id: params[:item_id])
-end
-
-def pay_item
-  Payjp.api_key = ENV['PAYJP_SECRET_KEY']
-  Payjp::Charge.create(
-    amount: @item.value,
-    card: user_item_address_params[:token],
-    currency: 'jpy'
-  )
-end
-
-end
-

@@ -16,6 +16,7 @@ class Item < ApplicationRecord
 
   has_one_attached :image
   belongs_to :user
+  has_one :user_item
   belongs_to :category
   belongs_to :place
   belongs_to :make_day
