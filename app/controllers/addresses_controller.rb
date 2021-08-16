@@ -25,7 +25,7 @@ def get_item_params
 end
 
 def user_item_address_params
-  params.require(:user_item_address).permit(:post_number, :prefectures_id, :city, :phone_number,
+  params.require(:user_item_address).permit(:post_number, :place_id, :city, :phone_number,
                                             :building_name, :address).merge(user_id: current_user.id, token: params[:token], item_id: params[:item_id])
 end
 
