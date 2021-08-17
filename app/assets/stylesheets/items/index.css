@@ -70,7 +70,7 @@ h3{
 .sold-out {
   position: absolute;
   top: 40%;
-  width: 100%;
+  width: 90%;
   text-align: center;
   background-color: crimson;
   transform: skewY(-10deg);

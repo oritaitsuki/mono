@@ -1,9 +1,10 @@
 class MakeDay < ActiveHash::Base
   self.data = [
     { id: 1, name: '--' },
-    { id: 2, name: '1~2日で発送' },
-    { id: 3, name: '２~3日で発送' },
-    { id: 4, name: '4~7日で発送' }
+    { id: 2, name: '作りたて' },
+    { id: 3, name: '作ってから半日' },
+    { id: 4, name: '作ってから１日' },
+    { id: 5, name: '作ってから２日以上'}
   ]
 
   include ActiveHash::Associations
