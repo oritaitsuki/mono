@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   root to: 'items#index'
   resources :items do
   resources :addresses, only: [:index, :create]
+  resources :prefectures, only: [:index]
   end
   resources :users, only: :show
+  
 end

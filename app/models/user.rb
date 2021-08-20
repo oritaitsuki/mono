@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  extend ActiveHash::Associations::ActiveRecordExtensions
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -16,6 +18,11 @@ validates_format_of :password, presence: true, length: { minimum: 6 }, with: PAS
 validates :nickname, presence: true
 validates :birth, presence: true
 
+with_options presence: true, numericality: { other_than: 1, message: "can't be blank" } do
+  validates :place_id
+end
+
 has_many :items
 has_many :user_items
+belongs_to :place
 end

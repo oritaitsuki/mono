@@ -12,6 +12,7 @@
 |read_first            |string   |null: false                |
 |read_family           |string   |null: false                |
 |birth                 |date     |null: false                |
+|place_id              |integer  |null: false               |
 
 ### Association
 has_many :items
@@ -53,7 +54,7 @@ has_one :address
 | Colum        | Type     | Options                     |
 | ------------ | -------- | --------------------------- |
 |post_number   |string    |null: false                  |
-|prefectures_id|integer   |null: false                  |
+|place_id      |integer   |null: false                  |
 |city          |string    |null: false                  |
 |address       |string    |null: false                  |
 |building_name |string    |                             |
