@@ -33,15 +33,25 @@ RSpec.describe Item, type: :model do
         @item.valid?
         expect(@item.errors.full_messages).to include("Category can't be blank")
       end
-      it '発送元の地域が選択されていないと登録できない' do
+      it '地域が選択されていないと登録できない' do
         @item.place_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Place can't be blank")
       end
-      it '発送までの日数が選択されていないと登録できない' do
+      it '作ってからの日数が選択されていないと登録できない' do
         @item.make_day_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Make day can't be blank")
+      end
+      it '市長区村がないと登録できない' do
+        @item.city = ''
+        @item.valid?
+        expect(@item.errors.full_messages).to include("City can't be blank")
+      end
+      it '住所がないと登録できない' do
+        @item.address = ''
+        @item.valid?
+        expect(@item.errors.full_messages).to include("Address can't be blank")
       end
       it '価格が入力されていないと登録できない' do
         @item.value = ''

@@ -53,6 +53,15 @@
           <th class="detail-item">地域</th>
           <td class="detail-value"><%= @item.place.name %></td>
         </tr>
+         <tr>
+          <th class="detail-item">市町区村</th>
+          <td class="detail-value"><%= @item.city%></td>
+        </tr>
+
+       <tr>
+          <th class="detail-item">住所</th>
+          <td class="detail-value"><%= @item.address%></td>
+        </tr>
         <tr>
           <th class="detail-item">作ってからの日数</th>
           <td class="detail-value"><%= @item.make_day.name %></td>

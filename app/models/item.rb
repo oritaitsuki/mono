@@ -11,6 +11,8 @@ class Item < ApplicationRecord
     validates :image
     validates :item_name
     validates :explanation
+    validates :city
+    validates :address
     validates :value, inclusion: { in: 300..9_999_999 }, format: { with: /\A[0-9]+\z/ }
   end
 

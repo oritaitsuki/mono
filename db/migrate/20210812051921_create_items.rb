@@ -5,6 +5,8 @@ class CreateItems < ActiveRecord::Migration[6.0]
       t.text   :explanation, null: false
       t.integer :category_id, null: false
       t.integer :place_id, null: false
+      t.string :city, null: false
+      t.string :address, null: false
       t.integer :make_day_id, null: false
       t.integer :value, null: false
       t.references :user, null: false, foreign_key: true

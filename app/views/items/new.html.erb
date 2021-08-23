@@ -64,6 +64,16 @@
           <span class="indispensable">必須</span>
         </div>
         <%= f.collection_select(:place_id, Place.all, :id, :name, {}, {class:"select-box", id:"item-place"}) %>
+         <div class="weight-bold-text">
+          市区町村
+          <span class="indispensable">必須</span>
+        <%= f.text_field :city, class:"input-default", id:"city", placeholder:"例）横浜市緑区"%>
+      </div>
+           <div class="weight-bold-text">
+          番地
+          <span class="indispensable">必須</span>
+        <%= f.text_field :address, class:"input-default", id:"addresses", placeholder:"例）青山1-1-1"%>
+      </div>
         <div class="weight-bold-text">
           作ってからの日数
           <span class="indispensable">必須</span>

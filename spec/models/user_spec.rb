@@ -114,10 +114,10 @@ RSpec.describe User, type: :model do
         @user.valid?
         expect(@user.errors[:birth]).to include("can't be blank")
       end
-      it '発送元の地域が選択されていないと登録できない' do
-        @item.place_id = 1
-        @item.valid?
-        expect(@item.errors.full_messages).to include("Place can't be blank")
+      it '地域が選択されていないと登録できない' do
+        @user.place_id = 1
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Place can't be blank")
       end
     end
   end

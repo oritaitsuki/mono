@@ -9,6 +9,7 @@ FactoryBot.define do
     first_name            { '太郎' }
     read_first            { 'タロウ' }
     birth                 { '2000-01-01' }
+    place_id   	         { 3 }
   end
 end
 

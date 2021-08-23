@@ -51,6 +51,8 @@ ActiveRecord::Schema.define(version: 2021_08_20_065331) do
     t.text "explanation", null: false
     t.integer "category_id", null: false
     t.integer "place_id", null: false
+    t.string "city", null: false
+    t.string "address", null: false
     t.integer "make_day_id", null: false
     t.integer "value", null: false
     t.bigint "user_id", null: false

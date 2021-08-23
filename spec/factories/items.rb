@@ -8,6 +8,8 @@ FactoryBot.define do
     explanation	         { 'アイテムです' }
     category_id          { 3 }
     place_id   	         { 3 }
+    city                 { '福岡' }
+    address              { '1-2-3' }
     make_day_id          { 3 }
     value { 3000 }
 
