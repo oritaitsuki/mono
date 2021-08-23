@@ -27,6 +27,8 @@ has_many :user_items
 |category_id       |integer   |null: false                  |
 |place_id          |integer   |null: false                  |
 |make_day_id       |integer   |null: false                  |
+|city          |string    |null: false                  |
+|address       |string    |null: false                  |
 |value             |integer   |null: false                  |
 |user              |references|null: false,foreign_key: true|
 
