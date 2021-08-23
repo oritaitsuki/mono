@@ -110,5 +110,5 @@ mono
 近くのユーザー同士を紐づける機能
 
 # データベース設計
-https://gyazo.com/3f4f057127efe4128b9cd1a9d67b5a7e
+[![Image from Gyazo](https://i.gyazo.com/e589e0b0f891eadee79019113362d9df.png)](https://gyazo.com/e589e0b0f891eadee79019113362d9df)
 
