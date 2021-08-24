@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="ALf-HghhVwIuUDyd64Rq" name="ページ1">
-        <mxGraphModel dx="713" dy="612" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="822" dy="680" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -8,10 +8,10 @@
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="28" value="users" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" parent="1" vertex="1">
-                    <mxGeometry x="470" y="120" width="160" height="150" as="geometry"/>
+                    <mxGeometry x="480" y="106" width="160" height="170" as="geometry"/>
                 </mxCell>
-                <mxCell id="29" value="email&#10;endcrypted_password&#10;nickname&#10;first_name&#10;family_name&#10;read_first&#10;read_family&#10;birth&#10;&#10;&#10;&#10;" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="28" vertex="1">
-                    <mxGeometry y="26" width="160" height="124" as="geometry"/>
+                <mxCell id="29" value="email&#10;endcrypted_password&#10;nickname&#10;first_name&#10;family_name&#10;read_first&#10;read_family&#10;place_id&#10;birth&#10;&#10;&#10;&#10;" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="28" vertex="1">
+                    <mxGeometry y="26" width="160" height="144" as="geometry"/>
                 </mxCell>
                 <mxCell id="32" value="user_items" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" parent="1" vertex="1">
                     <mxGeometry x="210" y="70" width="160" height="80" as="geometry"/>
