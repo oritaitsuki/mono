@@ -13,7 +13,7 @@ class Item < ApplicationRecord
     validates :explanation
     validates :city
     validates :address
-    validates :value, inclusion: { in: 300..9_999_999 }, format: { with: /\A[0-9]+\z/ }
+    validates :value, inclusion: { in: 0..9_999_999 }, format: { with: /\A[0-9]+\z/ }
   end
 
   has_one_attached :image

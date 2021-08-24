@@ -73,11 +73,6 @@ RSpec.describe Item, type: :model do
         @item.valid?
         expect(@item.errors.full_messages).to include('Value is not included in the list')
       end
-      it '価格が300以下の場合登録できない' do
-        @item.value = 299
-        @item.valid?
-        expect(@item.errors.full_messages).to include('Value is not included in the list')
-      end
       it '価格が9999999以上の場合登録できない' do
         @item.value = 10_000_000
         @item.valid?
