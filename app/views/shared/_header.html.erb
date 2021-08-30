@@ -7,7 +7,6 @@
            <%if user_signed_in? %>
             <div class="nav__right">
               <%= link_to "都道府県で探す", item_prefectures_path(current_user.id),class: :place_btn%>
-              <%= link_to "カテゴリー", "#", class: :navcategory_btn%>
               <%= link_to current_user.nickname, user_path(current_user.id), class: :current_user_name%>
               <%= link_to "ログアウト",  destroy_user_session_path, class: :nav__logout,  method: :delete %>
               <%= link_to "新規出品",new_item_path, class: :nav__btn %>
