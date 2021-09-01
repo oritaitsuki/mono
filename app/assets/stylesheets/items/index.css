@@ -19,6 +19,15 @@ h3{
   vertical-align: baseline;
 }
 
+.top-view{
+  height: 80vh;
+}
+
+.top-image{
+  height: 100%;
+  width: 100%;
+}
+
 
 /*商品一覧*/
 
