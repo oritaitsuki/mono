@@ -12,6 +12,7 @@ width: auto;
 border: 1px black solid;
 padding:60px 4% 70px;
 margin: 0 4%;
+background-color:cornsilk;
 }
 
 h3{
@@ -20,7 +21,7 @@ h3{
 }
 
 .top-view{
-  height: 80vh;
+  height: 70vh;
 }
 
 .top-image{
