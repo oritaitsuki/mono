@@ -7,19 +7,16 @@ class MessagesController < ApplicationController
   end
 
   private
+
   def message_params
     params.require(:message).permit(:text).merge(user_id: current_user.id, item_id: params[:item_id])
   end
-
-  
-
 end
 
-
-#def create
-  #@message = Message.new(text: params[:message][:text])
- # if @message.save
-   # ActionCable.server.broadcast 'message_channel', content: @message
-   # redirect_to "/items/#{message.item.id}"
-  #end
-#end
+# def create
+# @message = Message.new(text: params[:message][:text])
+# if @message.save
+# ActionCable.server.broadcast 'message_channel', content: @message
+# redirect_to "/items/#{message.item.id}"
+# end
+# end
