@@ -79,19 +79,19 @@
   </div>
  
 
- <div class="messages">
+ <div class="message-box">
   <% if user_signed_in? %>
    <%= form_with(model: [@item, @message], local: true) do |f| %>
-  <%= f.text_field :text, placeholder: "コメントする" %>
-  <%= f.submit '送信' %>
+  <%= f.text_field :text, placeholder: "コメントする", class:"message-text" %>
+  <%= f.submit '送信' ,class:"message-btn"%>
 <% end %>
  <% else %>
       <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
     <% end %>
-<div id='messages'>
+<div  id='messages'>
 <h4>＜コメント一覧＞</h4>
   <% @messages.reverse_each do |message| %>
-    <p><%= message.text %></p>
+    <p class="message-flag"><%= message.text %></p>
   <% end %>
 </div>
 </div>
