@@ -22,4 +22,5 @@ class Item < ApplicationRecord
   belongs_to :category
   belongs_to :place
   belongs_to :make_day
+  has_many :messages, dependent: :destroy
 end

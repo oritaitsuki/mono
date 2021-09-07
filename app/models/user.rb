@@ -25,4 +25,5 @@ end
 has_many :items
 has_many :user_items
 belongs_to :place
+has_many :messages, dependent: :destroy
 end

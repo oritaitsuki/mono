@@ -1,6 +1,6 @@
 .header {
   background-color:white;
-  height: 15vh;
+  height: 10vh;
   border-bottom: 1px black solid;
   background-color:cornsilk;
 }
@@ -12,7 +12,7 @@
 }
 
 .mono-icon {
-  width: 8vw;
+  width: 6vw;
   padding-left: 20px;
   
 }
@@ -23,6 +23,8 @@
   text-decoration: none;
   color:black;
   font-weight: normal;
+  padding-left: 20px;
+  font-family:Georgia, 'Times New Roman', Times, serif ;
 }
 
 
@@ -34,6 +36,7 @@
 .nav__right{
   margin-right:50px;
   margin-left: auto;
+  
 }
 
 .current_user_name{
